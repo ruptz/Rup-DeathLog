@@ -1,5 +1,7 @@
 # Rup Death Log
 
+![image](https://media.discordapp.net/attachments/1105754235246751805/1224620532343902298/image.png?ex=661e27bf&is=660bb2bf&hm=2f0814512e5df516a85b928a8e8f94d8f93a1def880335e69d80bee4ff3939ca&=&format=webp&quality=lossless&width=454&height=314)
+
 ## Description:
 - Rup Death Log is a Lua script designed for use in a FiveM server.
 - It logs player deaths and sends notifications to a Discord server webhook.
