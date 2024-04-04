@@ -32,6 +32,9 @@ To keep supporting my projects please consider doing one of the following :)
 - FiveM server
 - Discord server with webhook enabled
 
+# Credits:
+- [TheRealToxicDev](https://github.com/TheRealToxicDev) I took some of his logic and completely revamped it :)
+
 ## Contributors:
 - [Ruptz](https://github.com/ruptz)
 
