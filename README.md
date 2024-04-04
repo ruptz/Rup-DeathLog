@@ -12,8 +12,10 @@ To keep supporting my projects please consider doing one of the following :)
 - It logs player deaths and sends notifications to a Discord server webhook.
 
 ## Features:
-- Captures player name, cause of death, and location.
+- Captures player name, cause of death, and location if they died by them self.
+- Captures killer name, cause of death, and location if the victim died by another player.
 - Sends real-time notifications to a designated Discord channel.
+- Very clean and nice Debug messages.
 
 ## Usage:
 1. Install the Rup Death Log script files in your FiveM server.

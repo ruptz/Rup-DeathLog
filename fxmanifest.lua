@@ -3,8 +3,8 @@ game 'gta5'
 
 author 'Ruptz'
 description 'Deat Logger For Discord'
-version '1.0.0'
-repository ''
+version '2.0.0'
+repository 'https://github.com/ruptz/Rup-DeathLog'
 
 client_scripts {
     'client/*.lua'
