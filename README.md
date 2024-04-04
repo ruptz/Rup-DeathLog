@@ -5,17 +5,22 @@ To keep supporting my projects please consider doing one of the following :)
  - Like My [Forum]() Post❤️!
  - Star This Repository⭐!
 
-![image](https://media.discordapp.net/attachments/1105754235246751805/1224620532343902298/image.png?ex=661e27bf&is=660bb2bf&hm=2f0814512e5df516a85b928a8e8f94d8f93a1def880335e69d80bee4ff3939ca&=&format=webp&quality=lossless&width=454&height=314)
+![image](https://media.discordapp.net/attachments/1043860724419670026/1225396646087753838/image.png?ex=6620fa8f&is=660e858f&hm=24ac767bae6fd2bc70944eb9f1a14d63828d26b3e3b8c435fcd5b5187893e260&=&format=webp&quality=lossless&width=528&height=401)
 
 ## Description:
 - Rup Death Log is a Lua script designed for use in a FiveM server.
 - It logs player deaths and sends notifications to a Discord server webhook.
 
 ## Features:
-- Captures player name, cause of death, and location if they died by them self.
-- Captures killer name, cause of death, and location if the victim died by another player.
-- Sends real-time notifications to a designated Discord channel.
-- Very clean and nice Debug messages.
+- Victim Names
+- Killer Names
+- Better Logic
+- Weapon Names
+- Descriptions
+- Street Names
+- Coordinates
+- Victim and/or Killer's Discord @mentions
+- Clean Debug Messages
 
 ## Usage:
 1. Install the Rup Death Log script files in your FiveM server.
