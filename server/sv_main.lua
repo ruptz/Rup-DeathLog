@@ -13,7 +13,7 @@ AddEventHandler('rup-deathlog:OnPlayerKilled', function(Message, Weapon, Street,
         end
     end
 
-    if killer then
+    if Killer then
         local killerIds = GetPlayerIdentifiers(killer)
         for _, id in ipairs(killerIds) do
             if string.match(id, "^discord:") then
@@ -51,7 +51,7 @@ AddEventHandler('rup-deathlog:OnPlayerKilled', function(Message, Weapon, Street,
                 {["name"] = "", ["value"] = "", ["inline"] = false},
                 {["name"] = "Description", ["value"] = Message, ["inline"] = true},
                 {["name"] = "", ["value"] = "", ["inline"] = false},
-                {["name"] = "Weapon", ["value"] = Weapon, ["inline"] = true},
+                {["name"] = "Weapon", ["value"] = (Weapon or "Unknown"), ["inline"] = true},
                 {["name"] = "Street", ["value"] = Street, ["inline"] = true},
                 {["name"] = "Death Coordinates", ["value"] = formattedPos, ["inline"] = true},
             },

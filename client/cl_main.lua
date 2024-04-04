@@ -1,5 +1,9 @@
-function SendPlayerDeath(message, weapon, streetStr, pos)
-    TriggerServerEvent('rup-deathlog:OnPlayerKilled', message, weapon, streetStr, pos, killer)
+function SendPlayerDeath(message, weapon, streetStr, pos, killer)
+    if not killer then
+        TriggerServerEvent('rup-deathlog:OnPlayerKilled', message, weapon, streetStr, pos)
+    else
+        TriggerServerEvent('rup-deathlog:OnPlayerKilled', message, weapon, streetStr, pos, killer)
+    end
 end
 
 Citizen.CreateThread(function()
