@@ -3,8 +3,10 @@ function SendPlayerDeath(message, weapon, streetStr, pos)
 end
 
 Citizen.CreateThread(function()
-    print("^5DEBUG^7: ^2Thread started^7")
-    print("^5DEBUG^7: ^2Ped:^7", PlayerPedId())
+    if Config.Debug then
+        print("^5DEBUG^7: ^2Thread started^7")
+        print("^5DEBUG^7: ^2Ped:^7", PlayerPedId())
+    end
 
     while true do
         Citizen.Wait(0)
