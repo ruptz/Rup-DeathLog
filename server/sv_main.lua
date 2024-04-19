@@ -15,6 +15,9 @@ AddEventHandler('rup-deathlog:OnPlayerKilled', function(Message, Weapon, Street,
 
     if Killer then
         local killerIds = GetPlayerIdentifiers(killer)
+        if not killerIds or #killerIds == 0 then
+            return
+        end
         for _, id in ipairs(killerIds) do
             if string.match(id, "^discord:") then
                 killerId = string.gsub(id, "discord:", "")
