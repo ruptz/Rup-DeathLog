@@ -14,7 +14,7 @@ AddEventHandler('rup-deathlog:OnPlayerKilled', function(Message, Weapon, Street,
     end
 
     if Killer then
-        local killerIds = GetPlayerIdentifiers(killer)
+        local killerIds = GetPlayerIdentifiers(Killer)
         if not killerIds or #killerIds == 0 then
             return
         end
