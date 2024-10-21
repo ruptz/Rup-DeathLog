@@ -1,8 +1,8 @@
-RegisterServerEvent('rup-deathlog:OnPlayerKilled')
-AddEventHandler('rup-deathlog:OnPlayerKilled', function(Message, Weapon, Street, Position, Killer)
+RegisterServerEvent('rup-deathlog:OnPlayerKilled', function(Message, Weapon, Street, Position, Killer)
     local webhookUrl = Config.Discord.Settings.Webhook
     local playerName = GetPlayerName(source)
     local ids = GetPlayerIdentifiers(source)
+    local idsK = GetPlayerIdentifiers(Killer)
     
     local victimId = nil
     local killerId = nil
@@ -14,11 +14,7 @@ AddEventHandler('rup-deathlog:OnPlayerKilled', function(Message, Weapon, Street,
     end
 
     if Killer then
-        local killerIds = GetPlayerIdentifiers(Killer)
-        if not killerIds or #killerIds == 0 then
-            return
-        end
-        for _, id in ipairs(killerIds) do
+        for _, id in ipairs(idsK) do
             if string.match(id, "^discord:") then
                 killerId = string.gsub(id, "discord:", "")
             end

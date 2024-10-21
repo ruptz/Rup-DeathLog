@@ -2,7 +2,8 @@ function SendPlayerDeath(message, weapon, streetStr, pos, killer)
     if not killer then
         TriggerServerEvent('rup-deathlog:OnPlayerKilled', message, weapon, streetStr, pos)
     else
-        TriggerServerEvent('rup-deathlog:OnPlayerKilled', message, weapon, streetStr, pos, killer)
+        local kServId = GetPlayerServerId(killer)
+        TriggerServerEvent('rup-deathlog:OnPlayerKilled', message, weapon, streetStr, pos, kServId)
     end
 end
 
