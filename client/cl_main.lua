@@ -65,7 +65,7 @@ Citizen.CreateThread(function()
                 local message = '**' .. string.upper(GetPlayerName(PlayerId())) .. '** ' .. reasonOfDeath .. '.'
                 SendPlayerDeath(message, weapon, streetStr, pos)
             else
-                local message = '**' .. string.upper(GetPlayerName(killer)) .. '** ' .. (reasonOfDeath or 'Killed') .. ' **' .. string.upper(GetPlayerName(PlayerId())) .. '**.'
+                local message = '**' .. string.upper(GetPlayerName(killer)) .. '** ' .. reasonOfDeath .. ' **' .. string.upper(GetPlayerName(PlayerId())) .. '**.'
                 SendPlayerDeath(message, weapon, streetStr, pos, killer)
             end
 
