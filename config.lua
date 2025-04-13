@@ -1,9 +1,9 @@
 Config = {
     --[[ Debug ]]
-    Debug =  true,
+    Debug = false,
 
     --[[ Thread options ]]
-    Interval = 1000 -- msec, so 1000 is 1 second!
+    Interval = 1000, -- msec, so 1000 is 1 second!
 
     --[[ Weapon Groups ]]
     Weapon_Groups = {
@@ -32,7 +32,7 @@ Config = {
     --[[ Discord ]]
     Discord = {
         Settings = {
-            Webhook = 'https://discord.com/api/webhooks/1360996794544296087/AnbFGodfZJwCSajk7vAzwrD-8oMn91UR_sHdWaop8jmSz6ZYotDAoTJ32cLaYYLq9ef1',
+            Webhook = 'ADD_WEBHOOK_HERE',
             Name = 'Death Logs',
             Images = 'https://i.imgur.com/OZyXBv0.png'
         },
