@@ -137,7 +137,7 @@ CreateThread(function()
     local wasDead = false
     while true do
         Wait(Config.Interval or 1000)
-        if DoesEntityExist(cache.ped) then
+        if cache.ped then
             local isDead = IsEntityDead(cache.ped)
             if isDead and not wasDead then
                 handlePlayerDeath()
