@@ -1,3 +1,5 @@
+print("^2Deathlog thread started^7")
+
 -- You can edit the reasons, I kind of made it like GTA:O
 local DEATH_MESSAGES = {
     ['Melee'] = 'was killed in close combat',
@@ -37,7 +39,6 @@ local function handlePlayerDeath()
     if sourceOfDeath ~= 0 then
         if IsEntityAVehicle(sourceOfDeath) then
             local driver = GetPedInVehicleSeat(sourceOfDeath, -1)
-            local driver = GetPedInVehicleSeat(sourceOfDeath, -1)
             if driver ~= 0 then
                 if IsPedAPlayer(driver) then
                     local veh = GetVehiclePedIsIn(driver)
@@ -69,17 +70,20 @@ local function handlePlayerDeath()
     local deathReason = DEATH_MESSAGES[weaponGroup] or DEATH_MESSAGES.default
     local weaponName = weaponGroup
 
-    -- Vehicle or fall damage or slapped by an animal 0-0
+    -- Fall damage or slapped by an animal 0-0
     -- You can add more hashes here for other things, I would appriciate sending me them to add on to the script or make a Pull req :)
+    if causeOfDeath == -842959696 then
+        deathReason = 'fell to their death'
+        weaponName = 'Fall Damage'
+    elseif causeOfDeath == -100946242 or causeOfDeath == 148160082 then
+        deathReason = 'was mauled by an animal'
+        weaponName = 'Animal'
+    end
+
+    -- Vehicle Detect
     if isVehicleKill then
         deathReason = 'was flattened'
         weaponName = vehicleName
-    elseif causeOfDeath == -842959696 then
-        deathReason = 'fell to their death'
-        weaponName = 'Fall Damage'
-    elseif causeOfDeath == -100946242 or 148160082 then
-        deathReason = 'was mauled by an animal'
-        weaponName = 'Animal'
     end
 
     -- See if suicide
@@ -132,13 +136,18 @@ end
 CreateThread(function()
     local wasDead = false
     while true do
-        Wait(Config.Interval)
-        if cache.ped then
+        Wait(Config.Interval or 1000)
+        if DoesEntityExist(cache.ped) then
             local isDead = IsEntityDead(cache.ped)
             if isDead and not wasDead then
                 handlePlayerDeath()
             end
             wasDead = isDead
+        else
+            if Config.Debug then
+                print("Player ped not available yet")
+            end
+            Wait(2000)
         end
     end
 end)
