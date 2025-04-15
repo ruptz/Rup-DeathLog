@@ -60,7 +60,7 @@ RegisterServerEvent('rup-deathlog:OnPlayerKilled', function(data)
                 {["name"] = "Street", ["value"] = street, ["inline"] = true},
                 {["name"] = "Coordinates", ["value"] = formattedPos, ["inline"] = true},
             },
-            ["timestamp"] = os.date('!%Y-%m-%dT%H:%M:%SZ'),
+            ["timestamp"] = os.date('%Y-%m-%dT%H:%M'),
             ["footer"] = {
                 ["text"] = "Player Death Log",
                 ["icon_url"] = Config.Discord.Settings.Images,
