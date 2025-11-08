@@ -60,7 +60,7 @@ Config = {
     --[[ Discord ]]
     Discord = {
         Settings = {
-            Webhook = 'https://discord.com/api/webhooks/1360996794544296087/AnbFGodfZJwCSajk7vAzwrD-8oMn91UR_sHdWaop8jmSz6ZYotDAoTJ32cLaYYLq9ef1',
+            Webhook = 'ADD_WEBHOOK_HERE',
             Name = 'Death Logs',
             Images = 'https://i.imgur.com/OZyXBv0.png'
         },
